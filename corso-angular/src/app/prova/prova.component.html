@@ -1,0 +1,39 @@
+<!--<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{cani[0].nome.toUpperCase()}}</mat-card-title>
+    <mat-card-subtitle>{{cani[0].razza.toUpperCase()}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>This card indeterminates progress bar.</p>
+    <p>{{cani[0].testo.toUpperCase()}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>-->
+
+
+<!--<button mat-raised-button color="primary" [disabled]="isDisabled" >Primary</button>-->
+<button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
+
+
+<p>One way Binding</p>
+
+<mat-form-field class="example-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Vine" (input)="onInput($event)">
+  </mat-form-field>
+<p>Title: {{title}}</p>
+
+
+<p>Two way Binding</p>
+<mat-form-field class="example-full-width">
+  <mat-label>Favorite food</mat-label>
+  <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
+</mat-form-field>
+<p>Title:  {{title}}</p>
+
+
+
+
